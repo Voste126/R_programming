@@ -27,3 +27,29 @@ df[c(1,3), ]
 
 # Return the first and third columns (with all of the rows); no comma follows the vector so it indicates columns:
 df[c(1, 3)] 
+
+
+# Return the column named "name" with all of the rows (returns a data frame):
+df["name"]
+
+# Return the column named "name" with all of the rows (using "$" returns the vector):
+df$name
+
+# Using a vector for the names of the columns returns those columns in the selected order (with all of the rows):
+df[c("sex", "age", "name")] 
+
+# Logical subsetting¶
+# A logical expression is a question and can only return TRUE or FALSE.
+
+# By placing the logical expression from above within the square brackets of the data frame, 
+# only the TRUE rows will be returned.
+
+
+# Return the rows where the column "age" is less than 18, and return the columns "age" and "name": 
+df[df$age < 18, c("age", "name")]
+
+# Here, you are asking the data frame which rows have an "age" less than 18 AND a "sex" equivalent to "Female":
+(df$age<18) & (df$sex=="Female")
+
+#From the following data frame, select only the rows where "age" is over 30 and "sex" is "Male", and return only the columns "age" and "sex"
+df[(df$age>30) & (df$sex=="Male")]
