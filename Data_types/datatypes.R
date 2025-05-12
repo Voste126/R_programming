@@ -58,4 +58,17 @@ F
 # 1 == 2	Equivalent To	False
 # 1 != 2	Not Equal To	True
 
+# Using the three variables that you created above and the cat() function, output the following formatted sentence:
 
+# "We have 5 pets: 2 cats and 3 dogs."
+cat("we have",pets,"pets:",cats,"cats and",dogs,"dogs.")
+
+# Create a variable named length_of_sides and assign the value 8 to it.
+# Then create a variable named area and assign length_of_sides squared to it.
+# Then create a variable named perimeter and assign length_of_sides times 4 to it.
+# Print out the variables area and perimeter.
+length_of_sides <- 8
+area <- length_of_sides^2
+perimeter <- length_of_sides*4
+area
+perimeter
